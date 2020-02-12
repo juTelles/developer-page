@@ -97,38 +97,47 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #E6C9A8;
   height: 100%;
+  width: 100%;
+  font-size: 18px;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'montserrat', sans-serif;
   padding: 2em;
-  font-size: 1.25em;
+  font-size: 1em;
   height: 100%;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
   display: flex;
+  font-weight: 600;
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
-  color: #fff;
+  flex-flow: column wrap;
+  color: #66594A;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  width: 30%;
+  font-size: 0.95em;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  height: auto;
+  border-bottom: #66594A solid 1px;
+  text-align: left;
 }
 
-
+h3 {
+    font-family: 'montserrat', sans-serif;
+    font-size: 1.2em;
+    margin: 1em 0 0 0;
+}
 
 
 /* ==========================================================================
@@ -204,6 +213,24 @@ body {
 .clearfix:after {
     clear: both;
 }
+
+@media (min-width: 768px) {
+.div-1, .div-2, .div-3 {
+  display: flex;
+  font-size: 0.95em;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  border-bottom: 0;
+  width: 30%;
+}
+.div-1, .div-2 {
+  border-right: #66594A solid 1px;
+  padding-right: 1em;
+}
+}
+
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
