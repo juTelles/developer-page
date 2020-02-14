@@ -104,41 +104,68 @@ html {
 }
 
 body {
-  font-family: 'montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
   padding: 2em;
   font-size: 1em;
   height: 100%;
+  color: rgb(54, 48, 40);
+  font-weight: 600;
 }
 
-.wrapper {
+.container {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
-  font-weight: 600;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family:'Fredericka the Great', Serif;
+  color: rgb(58, 52, 45);
+  margin: 0 0 0.5em 0;
+}
+
+#text-divs {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 800;
+  margin: 0;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
-  flex-flow: column wrap;
-  color: #66594A;
   line-height: 1.5em;
-  font-size: 0.95em;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: auto;
-  border-bottom: #66594A solid 1px;
-  text-align: left;
+  border-bottom: #66594A solid 2px;
+  padding: 0;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
 }
 
 h3 {
-    font-family: 'montserrat', sans-serif;
-    font-size: 1.2em;
-    margin: 1em 0 0 0;
+  font-size: 0.7em;
 }
 
+}
 
 /* ==========================================================================
    Helper classes
@@ -215,21 +242,52 @@ h3 {
 }
 
 @media (min-width: 768px) {
-.div-1, .div-2, .div-3 {
+
+.container {
+  /*add display:flex and set justify-content to space-between*/
   display: flex;
-  font-size: 0.95em;
-  justify-content: center;
-  align-items: flex-start;
-  height: auto;
-  border-bottom: 0;
-  width: 30%;
-}
-.div-1, .div-2 {
-  border-right: #66594A solid 1px;
-  padding-right: 1em;
-}
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
+h1 {
+ font-size: 4.5em;
+ margin: 0.5em 0;
+}
+
+h2 {
+  font-size: 1.9em;
+  margin: 1em 0;
+}
+#text-divs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: #66594A solid 3px;
+  border-bottom: #66594A solid 3px;
+  padding: 0.6em;
+}
+.div-1, .div-2, .div-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border-bottom: 0;
+  flex-basis: 28%;
+  padding: 0.8em;
+}
+
+.div-1, .div-2 {
+  border-right: #66594A solid 2px;
+  padding-right: 1.1em;
+}
+
+footer h3 {
+  font-size: 1em;
+  font-family:'Fredericka the Great', Serif;
+}
 
 
 /* ==========================================================================
